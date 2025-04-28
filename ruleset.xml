@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Custom Software Metrics Ruleset"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>
+        A custom PMD ruleset for enforcing code quality metrics:
+        - Lines of Code (LoC)
+        - Cyclomatic Complexity (CC)
+        - Weighted Methods per Class (WMC)
+        - Coupling Between Objects (CBO)
+        - Lack of Cohesion in Methods (LCOM)
+    </description>
+
+    <rule ref="category/java/bestpractices.xml/LooseCoupling" />
+    <rule ref="category/java/design.xml/CyclomaticComplexity" />
+    <rule ref="category/java/design.xml/NcssCount" />
+    <rule ref="category/java/design.xml/GodClass">
+        <properties>
+<!--            &lt;!&ndash; Weighted Methods per Class (WMC) threshold &ndash;&gt;-->
+<!--            <property name="wmcThreshold" value="50" />-->
+
+<!--            &lt;!&ndash; Coupling Between Objects (CBO) threshold &ndash;&gt;-->
+<!--            <property name="cboThreshold" value="10" />-->
+
+<!--            &lt;!&ndash; Lack of Cohesion (LCOM) threshold &ndash;&gt;-->
+<!--            <property name="lcomThreshold" value="0.8" />-->
+
+<!--            &lt;!&ndash; Lines of Code (LoC) threshold &ndash;&gt;-->
+<!--            <property name="locThreshold" value="500" />-->
+        </properties>
+    </rule>
+
+</ruleset>
