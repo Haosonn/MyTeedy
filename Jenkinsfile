@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environPATH {
+        JAVA_HOME = 'C:\Program Files\Java\jdk-21'
+        PATH = 'C:\Program Files\Java\jdk-21;C:\Program Files\Java\jdk-21\bin;D:\Program Files (x86)\apache-maven-3.9.9\bin;'
+    }
     stages {
         stage('Clean') {
             steps {
